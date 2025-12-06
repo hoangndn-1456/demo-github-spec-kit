@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+/* Print-specific styles */
+@media print {
+
+    /* Hide the editor panel */
+    .h-screen {
+        height: auto !important;
+    }
+
+    header,
+    .border-r {
+        display: none !important;
+    }
+
+    /* Make preview full width */
+    .w-1\/2 {
+        width: 100% !important;
+    }
+
+    .bg-gray-50 {
+        background: white !important;
+    }
+
+    /* Optimize for A4 */
+    body {
+        font-size: 12pt;
+        line-height: 1.4;
+    }
+
+    h1 {
+        font-size: 24pt;
+    }
+
+    h2 {
+        font-size: 14pt;
+    }
+
+    /* Avoid page breaks inside sections */
+    section {
+        break-inside: avoid;
+    }
+}

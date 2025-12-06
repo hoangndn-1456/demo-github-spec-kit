@@ -1,0 +1,125 @@
+/* Basic Template Styles */
+:root {
+    --primary-color: #2563eb;
+    --text-color: #1f2937;
+    --bg-color: #ffffff;
+    --muted-color: #6b7280;
+    --border-color: #e5e7eb;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.hero {
+    text-align: center;
+    padding: 3rem 0;
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: 2rem;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.hero .label {
+    font-size: 1.25rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.hero .contact a {
+    color: var(--muted-color);
+    text-decoration: none;
+    margin: 0 0.5rem;
+}
+
+.hero .contact a:hover {
+    color: var(--primary-color);
+}
+
+section {
+    margin-bottom: 2.5rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.25rem;
+}
+
+ul {
+    list-style: none;
+}
+
+ul li {
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+ul li:last-child {
+    border-bottom: none;
+}
+
+.dates {
+    color: var(--muted-color);
+    font-size: 0.9rem;
+}
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.skills-list li {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    border: none;
+}
+
+footer {
+    text-align: center;
+    padding: 2rem 0;
+    color: var(--muted-color);
+    font-size: 0.875rem;
+    border-top: 1px solid var(--border-color);
+}
+
+/* Print Styles */
+@media print {
+    body {
+        padding: 0;
+        max-width: 100%;
+    }
+
+    .hero {
+        padding: 1rem 0;
+    }
+
+    section {
+        break-inside: avoid;
+    }
+}

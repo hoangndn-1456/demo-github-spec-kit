@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{name}} - Portfolio</title>
+  <meta name="description" content="{{summary}}">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="hero">
+    <h1>{{name}}</h1>
+    <p class="label">{{label}}</p>
+    <p class="contact">
+      {{#email}}<a href="mailto:{{email}}">{{email}}</a>{{/email}}
+      {{#url}}<a href="{{url}}" target="_blank">{{url}}</a>{{/url}}
+    </p>
+  </header>
+
+  <main>
+    <section id="about">
+      <h2>About</h2>
+      <p>{{summary}}</p>
+    </section>
+
+    {{#work.length}}
+    <section id="experience">
+      <h2>Experience</h2>
+      <ul>
+        {{#work}}
+        <li>
+          <h3>{{position}} at {{name}}</h3>
+          <p class="dates">{{startDate}} - {{endDate}}</p>
+          <p>{{summary}}</p>
+        </li>
+        {{/work}}
+      </ul>
+    </section>
+    {{/work.length}}
+
+    {{#projects.length}}
+    <section id="projects">
+      <h2>Projects</h2>
+      <ul>
+        {{#projects}}
+        <li>
+          <h3>{{name}}</h3>
+          <p>{{description}}</p>
+          {{#url}}<a href="{{url}}" target="_blank">View Project</a>{{/url}}
+        </li>
+        {{/projects}}
+      </ul>
+    </section>
+    {{/projects.length}}
+
+    {{#skills.length}}
+    <section id="skills">
+      <h2>Skills</h2>
+      <ul class="skills-list">
+        {{#skills}}
+        <li>{{name}}</li>
+        {{/skills}}
+      </ul>
+    </section>
+    {{/skills.length}}
+
+    {{#education.length}}
+    <section id="education">
+      <h2>Education</h2>
+      <ul>
+        {{#education}}
+        <li>
+          <h3>{{studyType}} in {{area}}</h3>
+          <p>{{institution}} ({{startDate}} - {{endDate}})</p>
+        </li>
+        {{/education}}
+      </ul>
+    </section>
+    {{/education.length}}
+  </main>
+
+  <footer>
+    <p>Generated with Portfolio Generator</p>
+  </footer>
+</body>
+</html>
